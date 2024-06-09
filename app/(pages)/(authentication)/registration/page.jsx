@@ -5,10 +5,47 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { FaGoogle, FaMobileAlt } from "react-icons/fa";
 import Logo from "../../../assets/Icons/Shipex-transparent-logo.png";
+import { Icon } from "react-icons-kit";
+import { eyeOff } from "react-icons-kit/feather/eyeOff";
+import { eye } from "react-icons-kit/feather/eye";
 
 const Signup = () => {
-  const [passwordshow1, setpasswordshow1] = useState(false);
-  const [passwordshow2, setpasswordshow2] = useState(false);
+
+   const [username, setUsername] = useState("");
+   const [lastname, setLastname] = useState("");
+   const [email, setEmail] = useState("");
+   const [company, setCompany] = useState("");
+ 
+   const [password, setPassword] = useState("");
+   const [confirmPassword, setConfirmPassword] = useState("");
+   const [type, setType] = useState("password");
+   const [icon, setIcon] = useState(eyeOff);
+
+   const handleToggle = () => {
+     if (type === "password") {
+       setIcon(eye);
+       setType("text");
+     } else {
+       setIcon(eyeOff);
+       setType("password");
+     }
+  };
+
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (!username || !lastname || !email || !company || !password || !confirmPassword) {
+      alert("Please fill in all fields");
+    } else if (password !== confirmPassword) {
+      alert("Passwords do not match");
+    }
+    else {
+      alert("Registration successful");
+    }
+  }
+   
+  
   return (
     <div className="bg-[#D3D3D3] ">
       <div className="flex justify-center items-center">
@@ -35,6 +72,8 @@ const Signup = () => {
                     </label>
                     <input
                       type="text"
+                      value={username}
+                      onChange={(e) => setUsername(e.target.value)}
                       className=" h-[2.25rem] mt-2  p-2 outline-none border border-gray-200 w-full !rounded-md placeholder:text-gray-300 placeholder:text-[.90rem]"
                       id="signup-firstname"
                       placeholder="first name"
@@ -49,6 +88,8 @@ const Signup = () => {
                     </label>
                     <input
                       type="text"
+                      value={lastname}
+                      onChange={(e) => setLastname(e.target.value)}
                       className=" h-[2.25rem] mt-2  p-2 outline-none border border-gray-200 w-full !rounded-md placeholder:text-gray-300 placeholder:text-[.90rem]"
                       id="signup-lastname"
                       placeholder="last name"
@@ -63,6 +104,8 @@ const Signup = () => {
                     </label>
                     <input
                       type="text"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
                       className=" h-[2.25rem] mt-2  p-2 outline-none border border-gray-200 w-full !rounded-md placeholder:text-gray-300 placeholder:text-[.90rem]"
                       id="signup-email"
                       placeholder="Your email address"
@@ -77,6 +120,8 @@ const Signup = () => {
                     </label>
                     <input
                       type="text"
+                      value={company}
+                      onChange={(e) => setCompany(e.target.value)}
                       className=" h-[2.25rem] mt-2  p-2 outline-none border border-gray-200 w-full !rounded-md placeholder:text-gray-300 placeholder:text-[.90rem]"
                       id="signup-company"
                       placeholder="Your Company"
@@ -105,6 +150,7 @@ const Signup = () => {
                     <option value="5000+">5000+</option>
                   </select>
                 </div>
+
                 <div className="xl:col-span-12 col-span-12 mt-4">
                   <label
                     htmlFor="signup-password"
@@ -112,36 +158,60 @@ const Signup = () => {
                   >
                     Password
                   </label>
-                  <input
-                    type="text"
-                    className=" h-[2.25rem] mt-2  p-2 outline-none border border-gray-200 w-full !rounded-md placeholder:text-gray-300 placeholder:text-[.90rem]"
-                    id="signup-password"
-                    placeholder="Your Password"
-                  />
+
+                  <div className="flex">
+                    <input
+                      type={type}
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
+                      className=" h-[2.25rem] mt-2  p-2 outline-none border border-gray-200 w-full !rounded-md placeholder:text-gray-300 placeholder:text-[.90rem]"
+                      id="signup-password"
+                      placeholder="password"
+                    />
+                    <span
+                      class="flex justify-end items-center pt-2  text-[.85rem] font-bold text-gray-700"
+                      onClick={handleToggle}
+                    >
+                      <Icon class="absolute mr-3" icon={icon} size={25} />
+                    </span>
+                  </div>
                 </div>
                 <div className="xl:col-span-12 col-span-12 mt-4">
                   <label
-                    htmlFor="signup-confirm-password"
+                    htmlFor="signup-password"
                     className="text-[.85rem] font-bold text-gray-700"
                   >
                     Confirm Password
                   </label>
-                  <input
-                    type="text"
-                    className=" h-[2.25rem] mt-2  p-2 outline-none border border-gray-200 w-full !rounded-md placeholder:text-gray-300 placeholder:text-[.90rem]"
-                    id="signup-confirm-password"
-                    placeholder="Your confirm Password"
-                  />
 
-                  <div className="xl:col-span-12 col-span-12 grid mt-4">
-                    <button
-                      type="button"
-                      className=" hover:bg-[#43aa84] bg-[#00c27c] text-white !font-medium dark:border-defaultborder/10 h-[2.5rem] rounded-[2rem] "
+                  <div className="flex">
+                    <input
+                      type={type}
+                      value={confirmPassword}
+                      onChange={(e) => setConfirmPassword(e.target.value)}
+                      className=" h-[2.25rem] mt-2  p-2 outline-none border border-gray-200 w-full !rounded-md placeholder:text-gray-300 placeholder:text-[.90rem]"
+                      id="signup-password"
+                      placeholder="confirm password"
+                    />
+                    <span
+                      class="flex justify-end items-center pt-2  text-[.85rem] font-bold text-gray-700"
+                      onClick={handleToggle}
                     >
-                      Sign Up
-                    </button>
+                      <Icon class="absolute mr-3" icon={icon} size={25} />
+                    </span>
                   </div>
                 </div>
+
+                <div className="xl:col-span-12 col-span-12 grid mt-4">
+                  <button
+                    type="submit"
+                    onClick={handleSubmit}
+                    className=" hover:bg-[#43aa84] bg-[#00c27c] text-white !font-medium dark:border-defaultborder/10 h-[2.5rem] rounded-[2rem] "
+                  >
+                    Register
+                  </button>
+                </div>
+
                 <div className="text-center">
                   <p className="text-[0.75rem] text-[#8c9097]  mt-2">
                     Already have an account?{" "}
