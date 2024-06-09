@@ -15,7 +15,7 @@ const Login = () => {
         <div>
           <div className='flex flex-col items-center'>
             <div className=' mt-[-5rem] flex justify-center'>
-              <Link href='#'>
+              <Link href='/'>
                 <Image src={Logo} alt='logo' width={100} height={100} />
               </Link>
             </div>
@@ -51,7 +51,7 @@ const Login = () => {
                       Password
                     </label>
                     <input
-                      type='text'
+                      type='password'
                       className=' h-[2.25rem] mt-2  p-2 outline-none border border-gray-200 w-full !rounded-md placeholder:text-gray-300 placeholder:text-[.90rem]'
                       id='signup-password'
                       placeholder='password'
@@ -86,8 +86,8 @@ const Login = () => {
                   <p className='text-[0.75rem] text-[#8c9097]  mt-4'>
                     Don&apos;t have an account?{' '}
                     <Link
-                      href='/signup'
-                      className='text-primary text-black text-[.90rem]  hover:underline'
+                      href='/registration'
+                      className=' text-black text-[.90rem]  hover:underline'
                     >
                       Register here
                     </Link>
