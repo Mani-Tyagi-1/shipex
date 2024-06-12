@@ -18,20 +18,10 @@ const verifypan = () => {
               placeholder='Ex. ABCP1234A1'
             />
           </div>
-          <div className='w-full h-full flex flex-col '></div>
-          <h4 className='font-semibold my-1 text-[.90rem]'>Name</h4>
-          <div className='w-full '>
-            <input
-              type='mobile'
-              value=''
-              className='w-[100%] border border-gray-300 rounded p-2 outline-none'
-              placeholder='Name'
-            />
-          </div>
 
           <div className='w-full flex flex-col justify-center mt-[6rem]'>
             <div className='w-full flex justify-center'>
-              <div className='border flex items-center justify-center  w-[20rem]  cursor-pointer hover:bg-[#43aa84] bg-[#00c27c] text-white  dark:border-defaultborder/10 h-[2.5rem] rounded-[2rem] '>
+              <div className='border flex items-center justify-center  w-[20rem] mt-[4rem] cursor-pointer hover:bg-[#43aa84] bg-[#00c27c] text-white  dark:border-defaultborder/10 h-[2.5rem] rounded-[2rem] '>
                 <Link
                   href='/verifyotp'
                   className=' p-3 !font-medium dark:border-defaultborder/10'

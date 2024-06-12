@@ -14,7 +14,7 @@ const personalpan = () => {
           <h4 className='font-semibold my-43 text-[1rem]'>
             What's your personal PAN Number?{' '}
           </h4>
-          <p>
+          <p className='py-2 mb-4 font- text-gray-500 text-[.85rem]'>
             We require this to verify your identity as per RBI guidelines to
             provide a secure payment experience for you{' '}
           </p>
@@ -26,15 +26,16 @@ const personalpan = () => {
               placeholder='Ex. xxxxxAJ10'
             />
           </div>
-          <div className='w-full flex justify-center'>
-            <div className='border flex items-center justify-center  w-[20rem]  mt-[11rem] cursor-pointer hover:bg-[#43aa84] bg-[#00c27c] text-white  dark:border-defaultborder/10 h-[2.5rem] rounded-[2rem] '>
+          <div className="w-full flex justify-center">
+            <div className="border flex items-center justify-center  w-[20rem]  mt-[7rem] cursor-pointer hover:bg-[#43aa84] bg-[#00c27c] text-white  dark:border-defaultborder/10 h-[2.5rem] rounded-[2rem] ">
               <Link
-                href='/verifyotp'
-                className=' !font-medium dark:border-defaultborder/10'
+                href="/verifyotp"
+                className=" !font-medium dark:border-defaultborder/10"
               >
                 Continue
               </Link>
             </div>
+
           </div>
         </div>
       </div>
