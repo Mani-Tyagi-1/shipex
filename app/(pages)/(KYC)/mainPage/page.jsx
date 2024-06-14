@@ -77,7 +77,7 @@ const MainPage = () => {
                 >
                   <Link
                     href={item.link}
-                    className="flex justify-center items-center gap-2  text-green-500 "
+                    className="flex justify-center items-center gap-2  text-green-500 font-bold"
                   >
                     {item.logo}
                     {item.name}
