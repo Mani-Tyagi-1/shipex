@@ -1,9 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 
 const MobileNumber = () => {
+  const [mobileNumber, setMobileNumber] = useState("");
   return (
     <div className="w-full min-h-screen bg-[#D3D3D3] flex justify-center items-center">
       <div className="w-[25rem]  h-[27rem] bg-white shadow-lg  p-7 pt-8 rounded-lg">
@@ -14,10 +15,11 @@ const MobileNumber = () => {
           <h4 className="font-semibold my-4 text-[1rem]">
             What&#39;s your Mobile Number ?{" "}
           </h4>
-          <div className="w-full ">
+          <div className="">
             <input
-                          type="mobile"
-                          value={MobileNumber}
+              type="mobile"
+              onChange={(e) => setMobileNumber(e.target.value)}
+              value={mobileNumber}
               className="w-[95%] border border-gray-300 rounded p-2 outline-none"
               placeholder="Enter Mobile Number"
             />
@@ -25,7 +27,7 @@ const MobileNumber = () => {
           <div className="w-full flex justify-center">
             <div className="border flex items-center justify-center  w-[20rem]  mt-[11rem] cursor-pointer hover:bg-[#43aa84] bg-[#00c27c] text-white  dark:border-defaultborder/10 h-[2.5rem] rounded-[2rem] ">
               <Link
-                href="/verifyotp"
+                href="verifyotp"
                 className=" !font-medium dark:border-defaultborder/10"
               >
                 Sent OTP

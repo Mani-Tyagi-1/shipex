@@ -1,7 +1,10 @@
-import Link from 'next/link';
-import React from 'react';
+'use client';
 
-const verifyOtp = () => {
+import Link from 'next/link';
+import { useState } from 'react';
+
+const VerifyOtp = () => {
+  const [otp, setOTP] = useState("");
   return (
     <div className='w-full min-h-screen bg-[#D3D3D3] flex justify-center items-center'>
       <div className='w-[25rem]  h-[23rem] bg-white shadow-lg  p-7 pt-8 rounded-lg'>
@@ -13,7 +16,8 @@ const verifyOtp = () => {
           <div className='w-full '>
             <input
               type='mobile'
-              value=''
+              onChange={(e) => setOTP(e.target.value)}
+              value={otp}
               className='w-[100%] border border-gray-300 rounded p-2 outline-none'
               placeholder='Enter Mobile Number'
             />
@@ -46,7 +50,7 @@ const verifyOtp = () => {
             <div className='w-full flex justify-center'>
               <div className='border flex items-center justify-center  w-[20rem]  cursor-pointer hover:bg-[#43aa84] bg-[#00c27c] text-white  dark:border-defaultborder/10 h-[2.5rem] rounded-[2rem] '>
                 <Link
-                  href='/verifyotp'
+                  href='verifyname'
                   className=' p-3 !font-medium dark:border-defaultborder/10'
                 >
                   Submit OTP
@@ -60,4 +64,4 @@ const verifyOtp = () => {
   );
 };
 
-export default verifyOtp;
+export default VerifyOtp;

@@ -1,9 +1,10 @@
 'use client';
 
 import Link from 'next/link';
-import React from 'react';
+import React, { useState } from 'react';
 
-const personalpan = () => {
+const Personalpan = () => {
+  const [pan,setPan] = useState('')
   return (
     <div className='w-full min-h-screen bg-[#D3D3D3] flex justify-center items-center'>
       <div className='w-[25rem]  h-[27rem] bg-white shadow-lg  p-7 pt-8 rounded-lg'>
@@ -20,8 +21,9 @@ const personalpan = () => {
           </p>
           <div className='w-full '>
             <input
-              type='mobile'
-              value=' '
+              type='text'
+              onChange={(e) => setPan(e.target.value)}
+              value={pan}
               className='w-[95%] border border-gray-300 rounded p-2 outline-none'
               placeholder='Ex. xxxxxAJ10'
             />
@@ -29,7 +31,7 @@ const personalpan = () => {
           <div className="w-full flex justify-center">
             <div className="border flex items-center justify-center  w-[20rem]  mt-[7rem] cursor-pointer hover:bg-[#43aa84] bg-[#00c27c] text-white  dark:border-defaultborder/10 h-[2.5rem] rounded-[2rem] ">
               <Link
-                href="/verifyotp"
+                href="#"
                 className=" !font-medium dark:border-defaultborder/10"
               >
                 Continue
@@ -43,4 +45,4 @@ const personalpan = () => {
   );
 };
 
-export default personalpan;
+export default Personalpan;
