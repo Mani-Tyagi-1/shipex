@@ -11,37 +11,37 @@ const MainPage = () => {
       id: 1,
       name: "Basic Details",
       logo: <LuBookUp2 />,
-      link: "/mainPage/basic-details/mobilenumber",
+      link: "/KYC/basic-details",
     },
     {
       id: 2,
       name: "Pan Details",
       logo: <FaRegCreditCard/>,
-      link: "/pancard-details",
+      link: "/KYC/panCard",
     },
     {
       id: 3,
       name: "GST Details",
       logo: <FaCreditCard />,
-      link: "/#",
+      link: "/KYC/GST",
     },
     {
       id: 4,
       name: "Aadhar Details",
       logo: <FaAddressCard />,
-      link: "/verifyadhaar",
+      link: "/KYC/aadhar",
     },
     {
       id: 5,
       name: "Bank Details",
       logo: <LuLandmark />,
-      link: "/bank-details",
+      link: "/KYC/bank",
     },
     {
       id: 6,
       name: "Agreement",
       logo: <FaHandshake />,
-      link: "/#",
+      link: "/KYC/agreement",
     },
   ];
 
@@ -64,7 +64,6 @@ const MainPage = () => {
           >
             <option value="">Select</option>
             <option value="individual">Individual</option>
-            <option value="soleproprietor">Sole-proprietor</option>
             <option value="company">Company </option>
           </select>
 
@@ -73,13 +72,15 @@ const MainPage = () => {
               {data.map((item) => (
                 <div
                   key={item.id}
-                  className="w-[47%] h-[3rem]  flex my-4 justify-center items-center shadow-md cursor-pointer rounded-md hover:scale-[1.07]  transition-all"
+                  className="w-[47%] h-[3.5rem]  flex my-4 justify-start pl-4 items-center shadow-md cursor-pointer rounded-md hover:scale-[1.07]  transition-all"
                 >
                   <Link
                     href={item.link}
                     className="flex justify-center items-center gap-2  text-green-500 font-bold"
                   >
-                    {item.logo}
+                    <div className="w-[2.5rem] h-[2.5rem] rounded-[2rem] flex justify-center items-center bg-green-100 text-[1.5rem] ">
+                      {item.logo}
+                    </div>
                     {item.name}
                   </Link>
                 </div>
@@ -88,9 +89,9 @@ const MainPage = () => {
             <div></div>
           </div>
 
-          <div className="w-full flex flex-col justify-center mt-[5rem]">
+          <div className="w-full flex flex-col justify-center mt-[4rem]">
             <div className="w-full flex justify-center">
-              <div className="border flex items-center justify-center  w-full mt-[-3rem] cursor-pointer hover:bg-[#43aa84] bg-[#00c27c] text-white  dark:border-defaultborder/10 h-[2.5rem] rounded-[2rem] ">
+              <div className="border flex items-center justify-center  w-full mt-[-3rem] cursor-pointer hover:bg-[#43aa84] bg-[#00c27c] text-white  dark:border-defaultborder/10 h-[2.5rem] rounded-[2rem] hover:scale-105 transition-all ">
                 <Link
                   href="/verifyotp"
                   className=" p-3 !font-medium dark:border-defaultborder/10"

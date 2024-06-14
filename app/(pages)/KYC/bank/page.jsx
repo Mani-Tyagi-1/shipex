@@ -2,7 +2,7 @@ import Link from 'next/link';
 import React from 'react';
 import { FaChevronLeft } from 'react-icons/fa';
 
-const bankDetails = () => {
+const Bank = () => {
   return (
     <div className="w-full min-h-screen bg-[#D3D3D3] flex justify-center items-center">
       <div className="w-[25rem]  h-[27rem] bg-white shadow-lg  p-7 pt-8 rounded-lg">
@@ -56,4 +56,4 @@ const bankDetails = () => {
   );
 };
 
-export default bankDetails;
+export default Bank;
