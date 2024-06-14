@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState } from 'react';
 import { FaGoogle, FaMobileAlt } from 'react-icons/fa';
-import Logo from '../../../assets/Icons/Shipex-transparent-logo.png';
+import Logo from '../../Shipex-transparent-logo.png';
 import { Icon } from 'react-icons-kit';
 import { eyeOff } from 'react-icons-kit/feather/eyeOff';
 import { eye } from 'react-icons-kit/feather/eye';
@@ -219,7 +219,7 @@ const Signup = () => {
                   <p className='text-[0.75rem] text-[#8c9097]  mt-2'>
                     Already have an account?{' '}
                     <Link
-                      href='/signin'
+                      href='/auth/signin'
                       className='text-black text-[.90rem]  hover:underline'
                     >
                       Sign in
