@@ -2,12 +2,18 @@
 
 import Link from 'next/link';
 import React from 'react';
+import { LuChevronLeft } from 'react-icons/lu';
 
 const AadhaarDetails = () => {
   return (
     <div className="w-full min-h-screen bg-[#D3D3D3] flex justify-center items-center">
-      <div className="w-[30rem]  h-[27rem] bg-white shadow-lg  p-7 pt-8 rounded-lg">
-        <p className="py-2 mb-4 font-bold text-gray-500 text-[.85rem]">Back</p>
+      <div className="w-[30rem]  fit-content bg-white shadow-lg  p-7 pt-8 rounded-lg">
+        <Link href={"/KYC"}>
+          <p className="py-2 mb-4 font-bold text-gray-500 text-[.85rem] cursor-pointer flex items-center">
+            <LuChevronLeft className="text-[1rem]" />
+            Back
+          </p>
+        </Link>
         <div className="w-full h-full flex flex-col ">
           <h4 className="font-semibold p-2 my-1 text-[1rem]">
             Aadhaar Details{" "}
@@ -15,9 +21,9 @@ const AadhaarDetails = () => {
           <div className="w-full ">
             <select
               type="text"
-              id="verify-type"
-              name="Verify Type"
-              class="w-full p-3 border rounded-lg text-sm outline-[#00c27c] outline-[1px]"
+              id="verificationType"
+              name="Verification Type"
+              class="w-full p-3 mb-2 border rounded-lg text-sm outline-[#00c27c] outline-[1px]"
               placeholder=""
               required=""
             >
@@ -28,7 +34,7 @@ const AadhaarDetails = () => {
             <input
               type="number"
               value={AadhaarDetails}
-              className="w-full border border-gray-300 mt-4 rounded-lg p-2 outline-none"
+              className="w-full  border border-gray-300 rounded p-2 outline-none"
               placeholder="Enter Aadhaar Number"
             />
           </div>

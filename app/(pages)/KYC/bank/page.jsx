@@ -1,19 +1,18 @@
 import Link from 'next/link';
 import React from 'react';
 import { FaChevronLeft } from 'react-icons/fa';
+import { LuChevronLeft } from 'react-icons/lu';
 
 const Bank = () => {
   return (
     <div className="w-full min-h-screen bg-[#D3D3D3] flex justify-center items-center">
-      <div className="w-[25rem]  h-[27rem] bg-white shadow-lg  p-7 pt-8 rounded-lg">
-        <div className="flex py-2 mb-4 items-center gap-1">
-          <Link href={'/pancard-details'}>
-          <FaChevronLeft className='hover:cursor-pointer'/>
-          </Link>
-          <h1 className=" font-bold text-blck-500 text-[.85rem]">
+      <div className="w-[25rem]  fit-content bg-white shadow-lg  p-7 pt-8 rounded-lg">
+        <Link href={"/KYC"}>
+          <p className="py-2 mb-4 font-bold text-gray-500 text-[.85rem] cursor-pointer flex items-center">
+            <LuChevronLeft className="text-[1rem]" />
             Back
-          </h1>
-        </div>
+          </p>
+        </Link>
         <h1 className="py-0 mb-4 font-bold text-blck-500 text-[.85rem]">
           Bank Details
         </h1>

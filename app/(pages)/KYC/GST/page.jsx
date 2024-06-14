@@ -2,37 +2,43 @@
 
 import Link from 'next/link';
 import React from 'react';
+import { LuChevronLeft } from 'react-icons/lu';
 
 const GST = () => {
   return (
-    <div className='w-full min-h-screen bg-[#D3D3D3] flex justify-center items-center'>
-      <div className='w-[25rem]  h-[23rem] bg-white shadow-lg  p-7 pt-8 rounded-lg'>
-        <p className='py-2 mb-4 font-bold text-gray-500 text-[.85rem]'>Back</p>
-        <div className='w-full h-full flex flex-col '>
-          <h4 className='font-semibold my-4 text-[1rem]'>GST Details </h4>
-          <div className='w-full '>
+    <div className="w-full min-h-screen bg-[#D3D3D3] flex justify-center items-center">
+      <div className="w-[25rem]  h-[23rem] bg-white shadow-lg  p-7 pt-8 rounded-lg">
+        <Link href={"/KYC"}>
+          <p className="py-2 mb-4 font-bold text-gray-500 text-[.85rem] cursor-pointer flex items-center">
+            <LuChevronLeft className="text-[1rem]" />
+            Back
+          </p>
+        </Link>
+        <div className="w-full h-full flex flex-col ">
+          <h4 className="font-semibold my-4 text-[1rem]">GST Details </h4>
+          <div className="w-full ">
             <input
-              type='mobile'
+              type="mobile"
               value={GST}
-              className='w-[95%] border border-gray-300 rounded p-2 outline-none'
-              placeholder='Enter GST Number'
+              className="w-[95%] border border-gray-300 rounded p-2 outline-none"
+              placeholder="Enter GST Number"
             />
           </div>
 
-          <div className='w-full  justify-center'>
-            <div className='border flex items-center justify-center  w-full  mt-[3rem] cursor-pointer hover:bg-[#43aa84] bg-[#00c27c] text-white  dark:border-defaultborder/10 h-[2.5rem] rounded-[2rem] '>
+          <div className="w-full  justify-center">
+            <div className="border flex items-center justify-center  w-full  mt-[3rem] cursor-pointer hover:bg-[#43aa84] bg-[#00c27c] text-white  dark:border-defaultborder/10 h-[2.5rem] rounded-[2rem] ">
               <Link
-                href='/verifyotp'
-                className=' !font-medium dark:border-defaultborder/10'
+                href="/verifyotp"
+                className=" !font-medium dark:border-defaultborder/10"
               >
                 Verify GST
               </Link>
             </div>
 
-            <div className='border flex items-center justify-center  w-full  mt-[1rem] cursor-pointer hover:bg-[#43aa84] bg-[#00c27c] text-white  dark:border-defaultborder/10 h-[2.5rem] rounded-[2rem] '>
+            <div className="border flex items-center justify-center  w-full  mt-[1rem] cursor-pointer hover:bg-[#43aa84] bg-[#00c27c] text-white  dark:border-defaultborder/10 h-[2.5rem] rounded-[2rem] ">
               <Link
-                href='/verifyotp'
-                className=' !font-medium dark:border-defaultborder/10'
+                href="/verifyotp"
+                className=" !font-medium dark:border-defaultborder/10"
               >
                 Update
               </Link>
