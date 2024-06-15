@@ -10,8 +10,6 @@ import { eyeOff } from "react-icons-kit/feather/eyeOff";
 import { eye } from "react-icons-kit/feather/eye";
 
 
-
-
 const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");

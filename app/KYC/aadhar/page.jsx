@@ -42,7 +42,7 @@ const AadhaarDetails = () => {
           <div className="w-full  justify-center">
             <div className="border flex items-center justify-center  w-full  mt-[3rem] cursor-pointer hover:bg-[#43aa84] bg-[#00c27c] text-white  dark:border-defaultborder/10 h-[2.5rem] rounded-[2rem] ">
               <Link
-                href="/verifyotp"
+                href="aadhar/verifyotp"
                 className=" !font-medium dark:border-defaultborder/10"
               >
                 Send OTP
@@ -51,7 +51,7 @@ const AadhaarDetails = () => {
 
             <div className="border flex items-center justify-center  w-full  mt-[1rem] cursor-pointer hover:bg-[#43aa84] bg-[#00c27c] text-white  dark:border-defaultborder/10 h-[2.5rem] rounded-[2rem] ">
               <Link
-                href="/verifyotp"
+                href="/KYC/bank"
                 className=" !font-medium dark:border-defaultborder/10"
               >
                 Update

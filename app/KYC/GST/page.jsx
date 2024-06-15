@@ -28,7 +28,7 @@ const GST = () => {
           <div className="w-full  justify-center">
             <div className="border flex items-center justify-center  w-full  mt-[3rem] cursor-pointer hover:bg-[#43aa84] bg-[#00c27c] text-white  dark:border-defaultborder/10 h-[2.5rem] rounded-[2rem] ">
               <Link
-                href="/verifyotp"
+                href="#"
                 className=" !font-medium dark:border-defaultborder/10"
               >
                 Verify GST
@@ -37,7 +37,7 @@ const GST = () => {
 
             <div className="border flex items-center justify-center  w-full  mt-[1rem] cursor-pointer hover:bg-[#43aa84] bg-[#00c27c] text-white  dark:border-defaultborder/10 h-[2.5rem] rounded-[2rem] ">
               <Link
-                href="/verifyotp"
+                href="/KYC/aadhar"
                 className=" !font-medium dark:border-defaultborder/10"
               >
                 Update
