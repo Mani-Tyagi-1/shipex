@@ -33,7 +33,7 @@ const ManualDetails = () => {
             </select>
 
             <input
-              type='number'
+              type='text'
               value={ManualDetails}
               className='w-full  border border-gray-300 rounded p-2 outline-none'
               placeholder='Enter Aadhaar Number'
@@ -45,13 +45,7 @@ const ManualDetails = () => {
               Upload Front Card{' '}
             </h4>
           </div>
-          <div className='w-30 justify-starting'>
-            <button
-             disabled ={uploding}
-  
-            >
-          </button>
-            </div>
+          
 
           <div className='w-full h-full flex flex-col '>
             <h4 className='font-semi p-2 my-1 text-[1rem]'>

@@ -1,9 +1,11 @@
 import Link from 'next/link';
-import React from 'react';
+import React, { useState } from 'react';
 import { FaChevronLeft } from 'react-icons/fa';
 import { LuChevronLeft } from 'react-icons/lu';
 
 const Bank = () => {
+     const [AccountNumber, setAccountNumber] = useState(" ");
+     const [Ifse, setIfsc] = useState(" ");
   return (
     <div className="w-full min-h-screen bg-[#D3D3D3] flex justify-center items-center">
       <div className="w-[25rem]  fit-content bg-white shadow-lg  p-7 pt-8 rounded-lg">
@@ -22,16 +24,18 @@ const Bank = () => {
           </h4>
           <div className="w-full ">
             <input
-              type="mobile"
-              value=""
+              type="text"
+              value={AccountNumber}
+              onChange={(e) => setAccountNumber(e.target.value)}
               className="w-[100%] border border-gray-300 rounded p-2 outline-none"
               placeholder="Ex. XXXXXXX1234"
             />
-            <h4 className="font-semibold my-1 mt-[.50rem] text-[1rem]">IFSC</h4>
+            <h4 className="font-semibold my-1 mt-[.50rem] text-[1rem]">IFSC</h4> 
             <div className="w-full ">
               <input
-                type="mobile"
-                value=""
+                type="text"
+                value={Ifsc}
+                onChange={(e) => setIfsc(e.target.value)}
                 className="w-[100%] border border-gray-300 rounded p-2 outline-none"
                 placeholder="Enter your IFSC"
               />
@@ -41,7 +45,7 @@ const Bank = () => {
             <div className="w-full flex justify-center">
               <div className="border flex items-center justify-center  w-[20rem] mt-[-3rem] cursor-pointer hover:bg-[#43aa84] bg-[#00c27c] text-white  dark:border-defaultborder/10 h-[2.5rem] rounded-[2rem] ">
                 <Link
-                  href="/KYC/agreement"
+                  href="/KYC"
                   className=" p-3 !font-medium dark:border-defaultborder/10"
                 >
                   Verify
