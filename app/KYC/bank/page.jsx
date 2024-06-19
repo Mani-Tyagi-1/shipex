@@ -1,11 +1,13 @@
+'use client';
+
 import Link from 'next/link';
 import React, { useState } from 'react';
-import { FaChevronLeft } from 'react-icons/fa';
+
 import { LuChevronLeft } from 'react-icons/lu';
 
 const Bank = () => {
      const [AccountNumber, setAccountNumber] = useState(" ");
-     const [Ifse, setIfsc] = useState(" ");
+     const [Ifsc, setIfsc] = useState(" ");
   return (
     <div className="w-full min-h-screen bg-[#D3D3D3] flex justify-center items-center">
       <div className="w-[25rem]  fit-content bg-white shadow-lg  p-7 pt-8 rounded-lg">
