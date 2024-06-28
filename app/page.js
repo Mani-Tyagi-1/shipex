@@ -18,6 +18,12 @@ export default function Home() {
           Verify
         </Link>
       </div>
+      <div className="flex gap-2">
+        <h1>India Map</h1>
+        <Link href={"orders/indiaMap"} className="text-blue-500">
+          Visit
+        </Link>
+      </div>
     </div>
   );
 }

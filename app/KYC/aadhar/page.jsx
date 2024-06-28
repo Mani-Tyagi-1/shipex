@@ -69,6 +69,7 @@ const AadhaarDetails = () => {
               </div>
             ) : (
               <div className="w-full p-4">
+                <h3>Upload Front page</h3>
                 <input
                   type="file"
                   accept="image/*"
@@ -85,6 +86,7 @@ const AadhaarDetails = () => {
                     />
                   </div>
                 )}
+                <h3>Upload Back page</h3>
                 <input
                   type="file"
                   accept="image/*"
