@@ -401,7 +401,7 @@ const IndiaMap = () => {
       </div>
 
       {/* ----------------------------- */}
-      <div className="absolute border-2 border-black">
+      <div className="absolute">
         <svg width={800} height={800}>
           <path
             className="hover:fill-[#00c27c] fill-purple-500  hover:cursor-pointer"
