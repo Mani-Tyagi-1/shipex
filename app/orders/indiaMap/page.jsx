@@ -22,9 +22,9 @@ const IndiaMap = () => {
   return (
     <>
       <div>IndiaMap</div>
-      <div className=" relative min-h-screen h-0 pb-[100%] md:hidden">
+      <div className=" relative min-h-screen h-0 pb-[100%] md:hidden   ">
         <svg
-          viewBox="0 00 800 800"
+          viewBox="0 0 800 800"
           preserveAspectRatio="xMidYMid meet"
           class="absolute top-0 left-0 w-full h-full"
         >
@@ -401,10 +401,10 @@ const IndiaMap = () => {
       </div>
 
       {/* ----------------------------- */}
-      <div className="">
+      <div className="absolute border-2 border-black">
         <svg width={800} height={800}>
           <path
-            className="hover:fill-[#00c27c] fill-purple-500   hover:cursor-pointer"
+            className="hover:fill-[#00c27c] fill-purple-500  hover:cursor-pointer"
             id="IN-AN"
             title="Andaman and Nicobar Islands"
             data-state="Andaman and Nicobar Islands"
